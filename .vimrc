@@ -3,6 +3,9 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
+" Using Vundle:
+" https://github.com/gmarik/Vundle.vim
+
 Plugin 'gmarik/Vundle.vim'
 Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
@@ -14,6 +17,7 @@ Plugin 'mattn/webapi-vim'
 Plugin 'mattn/gist-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'tpope/vim-rails'
+Plugin 'kien/ctrlp.vim'
 
 call vundle#end()
 filetype plugin indent on
