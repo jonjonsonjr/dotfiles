@@ -107,3 +107,7 @@ autocmd BufNewFile,BufRead *\.md set noexpandtab
 
 " Nerdtree
 map <Leader>n <plug>NERDTreeTabsToggle<CR>
+
+" Fugitive
+map <Leader>gb :Gblame<CR>
+map <Leader>gs :Gstatus<CR>
