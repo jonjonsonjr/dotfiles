@@ -6,18 +6,19 @@ call vundle#begin()
 " Using Vundle:
 " https://github.com/gmarik/Vundle.vim
 
-Plugin 'gmarik/Vundle.vim'
-Plugin 'bling/vim-airline'
-Plugin 'tpope/vim-fugitive'
-Plugin 'sickill/vim-monokai'
-Plugin 'scrooloose/nerdtree'
-Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'mattn/webapi-vim'
-Plugin 'mattn/gist-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'tpope/vim-rails'
+Plugin 'bling/vim-airline'
+Plugin 'gmarik/Vundle.vim'
+Plugin 'jistr/vim-nerdtree-tabs'
 Plugin 'kien/ctrlp.vim'
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
+Plugin 'pangloss/vim-javascript'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'scrooloose/nerdtree'
+Plugin 'sickill/vim-monokai'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rails'
 
 call vundle#end()
 filetype plugin indent on
