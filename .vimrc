@@ -23,44 +23,45 @@ Plugin 'tpope/vim-rails'
 call vundle#end()
 filetype plugin indent on
 
+" For showing off .vimrc
+autocmd! bufwritepost .vimrc source %
+
 let NERDTreeDirArrows=0
 let g:airline_left_sep=''
 let g:airline_right_sep=''
 let g:airline_theme='wombat'
 let g:airline_powerline_fonts=1
+set laststatus=2
 
 syntax enable
 colorscheme monokai
 set encoding=utf-8
 
-set title
-set showcmd
-set cursorline
-set showmode          " Tell you if you're in insert mode
-set ruler             " Show the cursor position all the time
-set relativenumber    " turns on relative line numbering
-set number            " add line number for current line
-set scrolloff=3
-set wildmenu
-set ttyfast
-set splitbelow
-set splitright
-set tabstop=2         " Set the tabstop to 4 spaces
-set shiftwidth=2      " Shiftwidth should match tabstop
-set softtabstop=2     " backspace tabs
-set expandtab         " Convert tabs to <tabstop> number of spaces
-set backspace=2       " makes backspace work like you expect
+set cursorline         " Highlight current line
+set number             " add line number for current line
+set relativenumber     " turns on relative line numbering
+set title              " Show filename in titlebar
+set showcmd            " Show what command I'm typing
+set scrolloff=3        " Show me where I'm going
+set wildmenu           " Autocomplete commands
+set tabstop=2          " Set the tabstop to 2 spaces
+set shiftwidth=2       " Shiftwidth should match tabstop
+set softtabstop=2      " backspace tabs
+set expandtab          " Convert tabs to <tabstop> number of spaces
+set backspace=2        " makes backspace work like you expect
 set autoindent
 set smartindent
-set ignorecase
 set smarttab
-set laststatus=2
-set showmatch         " Show matching [] () {} etc...
-set nohlsearch        " Don't highlight strings you're searching for
+set formatoptions+=ro  " Insert leading comment characters on newline
+set showmatch          " Show matching [] () {} etc...
+set ignorecase
 set smartcase
 set incsearch
-set formatoptions+=ro " Insert leading comment characters on newline
+set splitbelow
+set splitright
+set ttyfast
 set lazyredraw
+set clipboard=unnamed  " Copy/paste like normal
 
 set undodir=~/.vim/undo
 set undofile
@@ -69,10 +70,10 @@ set backup                 " keep a backup file
 set backupdir=/private/tmp " put it here
 set dir=/private/tmp       " put swap files here
 
-
 " behave yourself
 nnoremap Y y$
 
+" because of wordwrap
 noremap j gj
 noremap k gk
 
@@ -89,7 +90,18 @@ nmap <C-h> gT
 " :T <filename> opens file in new tab
 command! -complete=file -nargs=1 T tabedit <args>
 
+" Format file as JSON
 command! Json %!python -m json.tool
+
+" Tab completion!
+function! SuperTab()
+  if (strpart(getline('.'),col('.')-2,1)=~'^\W\?$')
+    return "\<Tab>"
+  else
+    return "\<C-n>"
+  endif
+endfunction
+imap <Tab> <C-R>=SuperTab()<CR>
 
 " Strip trailing whitespace (\ss) (strip spaces)
 function! StripWhitespace()
@@ -100,6 +112,9 @@ function! StripWhitespace()
         call setreg('/', old_query)
 endfunction
 noremap <leader>ss :call StripWhitespace()<CR>
+
+highlight WhitespaceEOL ctermbg=Red guibg=Red
+match WhitespaceEOL /\s\+$/
 
 " Make vim turn *off* expandtab for files named Makefile or makefile
 " We need the tab literal
@@ -112,3 +127,13 @@ map <Leader>n <plug>NERDTreeTabsToggle<CR>
 " Fugitive
 map <Leader>gb :Gblame<CR>
 map <Leader>gs :Gstatus<CR>
+
+" Keep selection highlighted when changing indentation
+vnoremap < <gv
+vnoremap > >gv
+
+" More logical indent/decrement
+nnoremap + <C-a>
+nnoremap - <C-x>
+
+let g:EclimCompletionMethod = 'omnifunc'
