@@ -10,15 +10,16 @@ Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'gmarik/Vundle.vim'
 Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'kien/ctrlp.vim'
 Plugin 'mattn/gist-vim'
 Plugin 'mattn/webapi-vim'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'sickill/vim-monokai'
+Plugin 'tpope/vim-surround'
+Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-markdown'
 
 call vundle#end()
 filetype plugin indent on
@@ -57,6 +58,7 @@ set showmatch          " Show matching [] () {} etc...
 set ignorecase
 set smartcase
 set incsearch
+set noeb               " No error bells
 set splitbelow
 set splitright
 set ttyfast
@@ -86,6 +88,13 @@ nmap gl <C-w>l
 " moving between tabs
 nmap <C-l> gt
 nmap <C-h> gT
+
+" move between tabs in insert mode
+imap <silent> <C-l> <ESC>gt
+imap <silent> <C-h> <ESC>gT
+
+" easier than esc
+imap <silent> <C-k> <ESC>
 
 " :T <filename> opens file in new tab
 command! -complete=file -nargs=1 T tabedit <args>
