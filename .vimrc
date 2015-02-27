@@ -70,8 +70,8 @@ set undodir=~/.vim/undo
 set undofile
 
 set backup                 " keep a backup file
-set backupdir=/private/tmp " put it here
-set dir=/private/tmp       " put swap files here
+set backupdir=~/.vim/tmp " put it here
+set dir=~/.vim/tmp       " put swap files here
 
 " behave yourself
 nnoremap Y y$
