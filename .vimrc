@@ -21,7 +21,10 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
-Plugin 'joshhartigan/vim-reddit'
+Plugin 'adimit/prolog.vim'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'kongo2002/fsharp-vim'
 
 call vundle#end()
 filetype plugin indent on
@@ -146,5 +149,21 @@ vnoremap > >gv
 " More logical indent/decrement
 nnoremap + <C-a>
 nnoremap - <C-x>
+
+" Toggle spell checking
+nnoremap <leader>w :call SpellCheckToggle()<cr>
+
+let g:spellcheck_is_on = 0
+
+function! SpellCheckToggle()
+ if g:spellcheck_is_on
+   set nospell
+   let g:spellcheck_is_on = 0
+ else
+   set spell spelllang=en_gb
+   let g:spellcheck_is_on = 1
+  endif
+endfunction
+
 
 let g:EclimCompletionMethod = 'omnifunc'
