@@ -1,32 +1,31 @@
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+call plug#begin()
 
-" Using Vundle:
-" https://github.com/gmarik/Vundle.vim
+" Using Plug:
+" https://github.com/junegunn/vim-plug
 
-Plugin 'airblade/vim-gitgutter'
-Plugin 'bling/vim-airline'
-Plugin 'gmarik/Vundle.vim'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'mattn/gist-vim'
-Plugin 'mattn/webapi-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'ryanss/vim-hackernews'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'sickill/vim-monokai'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-markdown'
-Plugin 'adimit/prolog.vim'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'kongo2002/fsharp-vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-airline'
+Plug 'gmarik/Vundle.vim'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'ryanss/vim-hackernews'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'sickill/vim-monokai'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-markdown'
+Plug 'adimit/prolog.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'kongo2002/fsharp-vim'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 " For showing off .vimrc
