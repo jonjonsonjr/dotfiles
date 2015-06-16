@@ -1,7 +1,5 @@
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call plug#begin()
+set nocompatible | filetype indent plugin on | syn on
+call plug#begin('~/.vim/plugged')
 
 " Using Plug:
 " https://github.com/junegunn/vim-plug
@@ -21,9 +19,13 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown'
+Plug 'tpop/vim-sensible'
+Plug 'tommcdo/vim-lion'
 Plug 'adimit/prolog.vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kongo2002/fsharp-vim'
+Plug 'AndewRadev/splitjoin.vim'
+Plug 'AndewRadev/inline_edit.vim'
 
 call plug#end()
 filetype plugin indent on
