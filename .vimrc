@@ -1,28 +1,33 @@
-set nocompatible
-filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+set nocompatible | filetype indent plugin on | syn on
+call plug#begin('~/.vim/plugged')
 
-" Using Vundle:
-" https://github.com/gmarik/Vundle.vim
+" Using Plug:
+" https://github.com/junegunn/vim-plug
 
-Plugin 'airblade/vim-gitgutter'
-Plugin 'bling/vim-airline'
-Plugin 'gmarik/Vundle.vim'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'mattn/gist-vim'
-Plugin 'mattn/webapi-vim'
-Plugin 'pangloss/vim-javascript'
-Plugin 'ryanss/vim-hackernews'
-Plugin 'scrooloose/nerdcommenter'
-Plugin 'scrooloose/nerdtree'
-Plugin 'sickill/vim-monokai'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-fugitive'
-Plugin 'tpope/vim-markdown'
+Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-airline'
+Plug 'gmarik/Vundle.vim'
+Plug 'jistr/vim-nerdtree-tabs'
+Plug 'mattn/gist-vim'
+Plug 'mattn/webapi-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'ryanss/vim-hackernews'
+Plug 'scrooloose/nerdcommenter'
+Plug 'scrooloose/nerdtree'
+Plug 'sickill/vim-monokai'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-markdown'
+Plug 'tpop/vim-sensible'
+Plug 'tommcdo/vim-lion'
+Plug 'adimit/prolog.vim'
+Plug 'kchmck/vim-coffee-script'
+Plug 'kongo2002/fsharp-vim'
+Plug 'AndewRadev/splitjoin.vim'
+Plug 'AndewRadev/inline_edit.vim'
 
-call vundle#end()
+call plug#end()
 filetype plugin indent on
 
 " For showing off .vimrc
@@ -145,5 +150,21 @@ vnoremap > >gv
 " More logical indent/decrement
 nnoremap + <C-a>
 nnoremap - <C-x>
+
+" Toggle spell checking
+nnoremap <leader>w :call SpellCheckToggle()<cr>
+
+let g:spellcheck_is_on = 0
+
+function! SpellCheckToggle()
+ if g:spellcheck_is_on
+   set nospell
+   let g:spellcheck_is_on = 0
+ else
+   set spell spelllang=en_gb
+   let g:spellcheck_is_on = 1
+  endif
+endfunction
+
 
 let g:EclimCompletionMethod = 'omnifunc'
