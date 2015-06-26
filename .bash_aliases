@@ -1,0 +1,22 @@
+# Aliases
+alias a='alias'
+a qq='exit'
+a up='cd ..'
+a ..='cd ..'
+a .3='cd ../../..'
+a .4='cd ../../../..'
+a .5='cd ../../../../..'
+a h='history'
+a j='jobs -l'
+a c='clear'
+a now='date +"%T"'
+a nowtime=now
+a nowdate='date +"%d-%m-%Y"'
+a vi='vim'
+a edit='vim'
+a vis='vim -S'
+a vir='vim -S'
+a rm='rm -I --preserve-root'
+a wget='wget -c'
+a back='cd $OLDPWD'
+
