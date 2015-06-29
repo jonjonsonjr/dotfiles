@@ -1,8 +1,3 @@
-# Add vim 7.4, ffmpeg, and annaconda to path
-export PATH="/u/css/comptonrj/vim74/src:u/css/comptonrj/ffmpeg/:/u/css/comptonrj/anaconda/bin:$PATH"
-# Update VIMRUNTIME to local vim74 version
-export VIMRUNTIME="/u/css/comptonrj/vim74/runtime"
-
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
