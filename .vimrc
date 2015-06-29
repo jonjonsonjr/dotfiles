@@ -19,13 +19,13 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-markdown'
-Plug 'tpop/vim-sensible'
+Plug 'tpope/vim-sensible'
 Plug 'tommcdo/vim-lion'
 Plug 'adimit/prolog.vim'
 Plug 'kchmck/vim-coffee-script'
 Plug 'kongo2002/fsharp-vim'
-Plug 'AndewRadev/splitjoin.vim'
-Plug 'AndewRadev/inline_edit.vim'
+Plug 'AndrewRadev/splitjoin.vim'
+Plug 'AndrewRadev/inline_edit.vim'
 
 call plug#end()
 filetype plugin indent on
@@ -71,12 +71,12 @@ set ttyfast
 set lazyredraw
 set clipboard=unnamed  " Copy/paste like normal
 
-set undodir=~/.vim/undo
+set undodir=~/.vim/undo//
 set undofile
 
-set backup                 " keep a backup file
-set backupdir=/private/tmp " put it here
-set dir=/private/tmp       " put swap files here
+set backup                    " keep a backup file
+set backupdir=~/.vim/backup// " put it here
+set dir=~/.vim/swap//         " put swap files here
 
 " behave yourself
 nnoremap Y y$
