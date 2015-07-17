@@ -1,0 +1,116 @@
+###Excluded URLs and keys###
+# Format:
+# Patterns:Keys
+http*://mail.google.com/*:jkgic?anrux
+http*://docs.google.com/*
+http*://soundcloud.com/*:hsmpl
+http*://app.roll20.net/editor/*:wcij/nN;[
+http*://github.com/*:sgndcipw?
+http*://twitter.com/*:rmnljkghp?
+###End###
+
+
+###Custom key mappings###
+unmap >>
+unmap <<
+map > goNext
+map < goPrevious
+map U scrollFullPageUp
+map D scrollFullPageDown
+map zh scrollToLeft
+map zl scrollToRight
+map zf LinkHints.activateModeToOpenIncognito
+map <a-k> moveTabRight
+map <a-j> moveTabLeft
+map <a-K> closeTabsOnRight
+map <a-J> closeTabsOnLeft
+map <c-X> closeOtherTabs
+map <c-F> LinkHints.activateModeToOpenInNewForegroundTab
+" Alternative help command to allow access to native help
+map <c-?> showHelp
+" Alternative to gg/G as in Vim when native hotkeys exist
+map $ scrollToBottom
+map ^ scrollToTop
+###End###
+
+
+###Custom search engines###
+#amazon
+a: https://www.amazon.com/s/field-keywords=%s
+
+#bandcamp
+b: https://bandcamp.com/search?q=%s
+bc: https://%s.bandcamp.com
+ba: https://%s.bandcamp.com
+
+#4chan
+4: https://4chan.org/%s
+4c: https://4chan.org/%s/catalog
+
+#define:
+d: https://www.google.com/search?q=define%3A%s
+
+#duckduckgo
+ddg: https://duckduckgo.com/?q=%s
+
+#github
+g: https://github.com/search?q=%s
+gh: https://github.com/%s
+gu: https://github.com/%s
+
+#images
+i: https://www.google.com/search?site=imghp&tbm=isch&q=%s
+png: https://www.google.com/search?site=imghp&tbm=isch&q=%s+type:png
+gif: https://www.google.com/search?site=imghp&tbm=isch&q=%s+type:gif
+jpg: https://www.google.com/search?site=imghp&tbm=isch&q=%s+type:jpg
+
+#reddit
+r: https://www.reddit.com/r/%s
+ru: https://www.reddit.com/u/%s
+
+#soundcloud
+s: https://soundcloud.com/search?q=%s
+sc: https://soundcloud.com/%s
+sa: https://soundcloud.com/%s
+
+#twitch
+t: https://www.twitch.tv/search?query=%s
+tc: https://www.twitch.tv/%s
+
+#twitter
+tw: https://twitter.com/search?q=%s
+ts: https://twitter.com/%s
+tu: https://twitter.com/%s
+
+#wikipedia
+w: https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s
+
+#youtube
+y: https://www.youtube.com/results?search_query=%s
+yc: https://www.youtube.com/%s
+###End###
+
+
+###CSS for link hints###
+div > .vimiumHintMarker {
+/* linkhint boxes */
+background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#ddd));
+box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+border: 1px solid #bbb;
+border-radius: 5px;
+padding: 2px;
+opacity:0.9;
+}
+
+div > .vimiumHintMarker span {
+/* linkhint text */
+color: #a00;
+font-weight: bold;
+font-size: 10px;
+}
+
+div > .vimiumHintMarker > .matchingCharacter {
+/* bufferent linkhint text */
+color: #966;
+}
+###End###
