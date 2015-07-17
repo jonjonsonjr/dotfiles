@@ -1,0 +1,72 @@
+" the best
+" https://github.com/xyos/dotfiles/blob/master/.pentadactyl/colors/molokai.penta
+colorscheme molokai
+
+" more general home-row prioritized hint keys
+" comment out if you prefer numbers are typing text of the link
+set hintkeys='sadfjklewcmpgh'
+
+" monokai reference colors:
+" dark:  #272822
+" pink:  #F92672
+" blue:  #66D9EF
+" green: #A6E22E
+" ornge: #FD971F
+
+" hint Styling: Overwrites some from colorscheme
+hi Hint background:linear-gradient(#272822,#000);box-shadow:0 2px 3px rgba(0,0,0,0.5);border:1px solid #474842;border-radius:0px;padding:0px 3px;opacity:0.75;color:#66d9ef;font-size:10px;font-familt:"Trebuchet MS",Helvetica,sans-serif;text-transform:uppercase;
+hi Hint[active] color:#fd971f;border-color:#fd971f;
+hi HintElem background-colorinherit !important;color:#272822 !important; -moz-box-shadow:0px 0px 2px 2px rgba(102,217,239,0.5);
+
+" moving between tabs
+nmap <C-l> gt
+nmap <C-h> gT
+
+" close tabe alternate
+" close active tab
+nmap x d
+" restore tab
+nmap X u
+" close all other tabs
+nmap <C-X> :tabonly<CR>
+
+" re-arrange tabs
+nmap <A-j> :tabmove -1<CR>
+nmap <A-k> :tabmove +1<CR>
+
+" moving between tabs in insert mode
+imap <silent> <C-l> <ESC>gt
+imap <silent> <C-h> <ESC>gT
+
+" home row ESC
+imap <silent> <C-k> <ESC>
+
+" Search Keywords. Won't creatre dups. Feel free to comment out after first run or if you don't like them.
+" :bma http://4chan.org/%s -k 4chan -title "4Chan"
+" :bma http://4chan.org/%s/catalog -k 4catalog -title "4Chan Catalog"
+" :bma http://www.amazon.com/s/field-keywords=%s -k amazon -title "Search Amazon"
+" :bma http://www.collegehumor.com/%s -k collegehumor -title "College Humor"
+" :bma http://www.cracked.com/%s -k cracked -title "Cracked"
+" :bma http://github.com/%s -k github -title "Github"
+" :bma http://github.com/search?q=%s -k search-github -title "Search Github"
+" :bma http://www.google.com/search?q=define%3A%s -k define -title "Define a word"
+" :bma http://www.google.com/search?site=imghp&tbm=isch&q=%s -k img -title "Image search"
+" :bma http://www.google.com/search?site=imghp&tbm=isch&q=%s+type:png -k png -title "PNG search"
+" :bma http://www.google.com/search?site=imghp&tbm=isch&q=%s+type:gif -k gif -title "GIF search"
+" :bma http://www.google.com/search?site=imghp&tbm=isch&q=%s+type:jpg -k jpg -title "JPG search"
+" :bma http://imgur.com/%s -k imgur -title "Imgur"
+" :bma http://news.ycombinator.com/%s -k hackernews -title "Hacker News"
+" :bma http://reddit.com/%s -k reddit -title "Reddit"
+" :bma http://reddit.com/r/%s -k subreddit -title "Subreddit"
+" :bma http://soundcloud.com/search?q=%s -k search-soundcloud -title "Search Soundcloud"
+" :bma http://soundcloud.com/%s -k soundcloud -title "Soundcloud"
+" :bma http://www.twitch.tv/%s -k twitch -title "Twitch.tv"
+" :bma http://www.twitch.tv/search?query=%s -k search-twitch -title "Search Twitch.tv"
+" :bma http://twitter.com/search?q=%s -k search-twitter -title "Twitter"
+" :bma http://twitter.com/%s -k twitter -title "Twitter Stream"
+" :bma http://www.youtube.com/%s -k youtube -title "Youtube"
+" :bma http://www.youtube.com/results?search_query=%s -k search-youtube -title "Search Youtube"
+
+" :bma http://gmail.com -k mail -title "Gmail"
+" :bma http://www.google.com/search?q=%s+weather -k weather -title "Google weather"
+" :bma http://webmail.appstate.edu -k webmail -title "App State Mail"
