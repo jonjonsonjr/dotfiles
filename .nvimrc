@@ -38,6 +38,10 @@ let g:spellcheck_region= "en_gb"
 let g:tw_val=80
 let mapleader="\\"
 
+" Vim-Lion config to avoid conflict
+let g:lion_map_right='zl'
+let g:lion_map_left='zL'
+
 " For showing off .vimrc
 autocmd! bufwritepost .vimrc source %
 
@@ -199,7 +203,7 @@ function! TextWidthToggle()
     echo "notw"
   else
     exec 'setlocal tw='.g:tw_val
-    echo "tw=80"
+    echo "tw=".g:tw_val
   endif
 endfunction
 
