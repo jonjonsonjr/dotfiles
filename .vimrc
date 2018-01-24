@@ -9,11 +9,7 @@ call vundle#begin()
 Plugin 'airblade/vim-gitgutter'
 Plugin 'bling/vim-airline'
 Plugin 'gmarik/Vundle.vim'
-Plugin 'jistr/vim-nerdtree-tabs'
-Plugin 'mattn/gist-vim'
-Plugin 'mattn/webapi-vim'
 Plugin 'pangloss/vim-javascript'
-Plugin 'ryanss/vim-hackernews'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'scrooloose/nerdtree'
 Plugin 'sickill/vim-monokai'
@@ -21,6 +17,7 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-fugitive'
 Plugin 'tpope/vim-markdown'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 filetype plugin indent on
